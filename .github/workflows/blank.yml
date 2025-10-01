@@ -31,6 +31,6 @@ jobs:
           chmod +x mpm
           sudo ./mpm install --release=R2025b --destination=/opt/MATLAB --products=MATLAB
 
-      - name: Run MEX
+      - name: Build MEX function
         run: |
-          /opt/MATLAB/bin/mex -h
+          /opt/MATLAB/bin/mex timestwo.c
