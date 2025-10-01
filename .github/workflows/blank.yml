@@ -27,7 +27,7 @@ jobs:
       
       - name: Install MATLAB
         run: |
-          wget https://www.mathworks.com/mpm/glnxa64/mpm
+          wget -q https://www.mathworks.com/mpm/glnxa64/mpm
           chmod +x mpm
           sudo ./mpm install --release=R2025b --destination=/opt/MATLAB --products=MATLAB
 
