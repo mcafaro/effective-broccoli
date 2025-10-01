@@ -29,4 +29,8 @@ jobs:
         run: |
           wget https://www.mathworks.com/mpm/glnxa64/mpm
           chmod +x mpm
-          ./mpm install --release=R2025b --products=MATLAB
+          sudo ./mpm install --release=R2025b --destination=/opt/MATLAB --products=MATLAB
+
+      - name: Run MEX
+        run: |
+          /opt/MATLAB/bin/mex -h
